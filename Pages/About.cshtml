@@ -1,0 +1,17 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "About";
+}
+<h2>@ViewData["Title"]</h2>
+<br/>
+<h4>Operating System: @Model.OperatingSystem</h4>
+<h4>Framework: @Model.FrameworkDescription</h4>
+<h4>Architecture: @Model.Architecture</h4>
+<h4>Hostname: @Model.Hostname</h4>
+<br/>
+<h4>IP Addresses:</h4>
+@foreach(string ipAddress in @Model.IpAddresses)
+{
+    <p>@ipAddress</p>
+}
